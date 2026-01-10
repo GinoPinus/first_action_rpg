@@ -1,10 +1,17 @@
-[gd_scene load_steps=2 format=3 uid="uid://scbl08rxqmt7"]
+[gd_scene load_steps=3 format=3 uid="uid://scbl08rxqmt7"]
 
 [ext_resource type="PackedScene" uid="uid://0gqaotxfmjy8" path="res://scenes/player.tscn" id="1_nnsk1"]
+[ext_resource type="PackedScene" uid="uid://bahs8bfn7unim" path="res://scenes/slime.tscn" id="2_rwgxs"]
 
 [node name="World" type="Node2D"]
+y_sort_enabled = true
 
 [node name="Player" parent="." instance=ExtResource("1_nnsk1")]
+position = Vector2(-31, 11)
 
 [node name="Camera2D" type="Camera2D" parent="."]
 zoom = Vector2(3, 3)
+
+[node name="Slime" parent="." instance=ExtResource("2_rwgxs")]
+position = Vector2(34, 12)
+motion_mode = 1
