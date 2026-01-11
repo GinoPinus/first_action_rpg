@@ -1,4 +1,4 @@
-[gd_scene load_steps=56 format=3 uid="uid://0gqaotxfmjy8"]
+[gd_scene load_steps=57 format=3 uid="uid://0gqaotxfmjy8"]
 
 [ext_resource type="Texture2D" uid="uid://cbqy27i582u72" path="res://art/temp_sprites/characters/player.png" id="1_3vyb7"]
 [ext_resource type="Script" uid="uid://c4xki0aj3y4nf" path="res://scripts/player.gd" id="1_g2els"]
@@ -414,9 +414,13 @@ animations = [{
 }]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_g2els"]
+radius = 4.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_qhqgy"]
 radius = 5.0
 
 [node name="Player" type="CharacterBody2D"]
+collision_layer = 3
 script = ExtResource("1_g2els")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
@@ -428,3 +432,10 @@ autoplay = "front_idle"
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, -3)
 shape = SubResource("CircleShape2D_g2els")
+
+[node name="HurtBox" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HurtBox"]
+position = Vector2(0, -3)
+shape = SubResource("CircleShape2D_qhqgy")
+debug_color = Color(0.9831286, 0.22955772, 0.20314851, 0.41960785)
