@@ -12,5 +12,10 @@ position = Vector2(-103, 8)
 [node name="Camera2D" type="Camera2D" parent="."]
 zoom = Vector2(3, 3)
 
-[node name="Slime" parent="." instance=ExtResource("2_rwgxs")]
+[node name="Mobs" type="Node" parent="."]
+
+[node name="Slime" parent="Mobs" instance=ExtResource("2_rwgxs")]
 position = Vector2(32, 0)
+
+[node name="Slime2" parent="Mobs" instance=ExtResource("2_rwgxs")]
+position = Vector2(32, 40)

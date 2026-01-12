@@ -4,6 +4,8 @@ const SPEED: float = 80.0
 var direction = 0
 var last_direction: Vector2 = Vector2.ZERO
 
+@export var health: float = 100.0
+
 func _physics_process(delta: float) -> void:
 	#Update direction
 	direction = Input.get_vector("move_left", "move_right", "move_up", "move_down")
@@ -36,3 +38,8 @@ func _physics_process(delta: float) -> void:
 			$AnimatedSprite2D.play("back_idle")
 			
 	move_and_slide()
+
+
+func _on_hurt_box_body_entered(body: Node2D) -> void:
+	health -= body.damage
+	print(health)

@@ -420,7 +420,8 @@ radius = 4.0
 radius = 5.0
 
 [node name="Player" type="CharacterBody2D"]
-collision_layer = 3
+collision_layer = 2
+collision_mask = 5
 script = ExtResource("1_g2els")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
@@ -434,8 +435,12 @@ position = Vector2(0, -3)
 shape = SubResource("CircleShape2D_g2els")
 
 [node name="HurtBox" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HurtBox"]
 position = Vector2(0, -3)
 shape = SubResource("CircleShape2D_qhqgy")
 debug_color = Color(0.9831286, 0.22955772, 0.20314851, 0.41960785)
+
+[connection signal="body_entered" from="HurtBox" to="." method="_on_hurt_box_body_entered"]

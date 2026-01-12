@@ -1,12 +1,13 @@
 extends CharacterBody2D
 
-
 const SPEED: float = 20.0
 var direction: Vector2 = Vector2.ZERO
 var last_direction = direction
 
 var player_in_range: bool = false
 var player: Node2D = null
+
+@export var damage:float = 5.0
 
 
 func _physics_process(delta: float) -> void:
