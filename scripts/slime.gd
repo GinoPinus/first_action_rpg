@@ -13,7 +13,7 @@ var player: Node2D = null
 func _physics_process(delta: float) -> void:
 	if player_in_range:
 		velocity = position.direction_to(player.position) * SPEED
-		move_and_slide()
+		#move_and_slide()
 
 func _process(delta: float) -> void:
 	#animations

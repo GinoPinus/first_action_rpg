@@ -531,19 +531,19 @@ radius = 3.0
 height = 10.0
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_371uh"]
-radius = 51.0392
+radius = 87.0919
 
 [node name="Slime" type="CharacterBody2D"]
 collision_layer = 4
-collision_mask = 6
+collision_mask = 7
 motion_mode = 1
 script = ExtResource("1_p2gj0")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(0, -7)
 sprite_frames = SubResource("SpriteFrames_qywsl")
 animation = &"front_idle"
 autoplay = "front_idle"
+offset = Vector2(0, -7)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, -3)

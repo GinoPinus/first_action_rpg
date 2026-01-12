@@ -425,10 +425,10 @@ collision_mask = 5
 script = ExtResource("1_g2els")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(-1, -17)
 sprite_frames = SubResource("SpriteFrames_lxlsd")
 animation = &"front_idle"
 autoplay = "front_idle"
+offset = Vector2(0, -17)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, -3)
